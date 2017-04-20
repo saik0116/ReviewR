@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com http://griffis.edumedia.ca  'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content: griffis.edumedia.ca  placeholdit.imgix.net placehold.it ;"/>
+        
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="msapplication-tap-highlight" content="no"/>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
+        
+        <!-- Include the compiled Ratchet CSS -->
+        <link href="css/ratchet.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <title>ReviewR</title>
+        
+    </head>
+    <body>
+        <header class="bar bar-nav">
+            <a class=" add1 btn btn-link btn-nav pull-right" id="addbtn" href="#personModal" data-transition="">
+                Add Item
+                <span class="icon icon-plus"></span>
+            </a>
+            <h1 class="title">ReviewR</h1>
+        </header>
+        <!--
+        <nav class="bar bar-tab">
+            <a class="tab-item">
+                <span class="icon icon-plus"></span>
+                <span class="tab-label">Add Person</span>
+            </a>
+        </nav>
+        -->
+        <div class="content" id="contacts">
+            <!-- read through localStorage for contacts -->
+            <ul class="table-view" id="item-list">
+                
+                
+            </ul>
+        </div>
+        <div id="editModal" class="modal">
+            <header class="bar bar-nav">
+                <a class=" add1 btn btn-link btn-nav pull-left" id="addbtn" href="#editModal" data-transition="">
+                Back
+                <span class="icon icon-left-nav"></span>
+            </a>
+            </header>
+
+            <div class="content" id="myEdit">
+                <div class="content-padded"> 
+                    <h1 id="editname"></h1>
+                    <h2 id="ratingz"></h2>    
+                    <img id="editimg">    
+             
+            </div>
+        </div> </div>
+        
+        
+        <div id="personModal" class="modal">
+            <header class="bar bar-nav">
+                
+                <h1 class="title">Item Add</h1>
+            </header>
+
+            <div class="content" id="test2">
+                <div class="content-padded">
+                    <form id="myForm" class="input-group">
+                        <div class="input-row">
+                            <label>Item</label>
+                            <input type="text" id="item" placeholder="Item" />
+                        </div>
+                        <div class="input-row">
+                            <label>Rating<span></span></label>
+                            
+                            <div id="rating" class="stars">
+                                <br>
+  <span class="star">&nbsp;</span>
+  <span class="star">&nbsp;</span>
+  <span class="star">&nbsp;</span>
+  <span class="star">&nbsp;</span>
+  <span class="star">&nbsp;</span>
+</div>
+                        </div>
+                        
+<!--
+                        <div class="input-row">
+                            <label>Image</label>
+                            <input id="image" value="a"/>
+                        </div>
+--><img id="myImage">
+                   <p id="captured-photo"></p>
+                    </form>
+                    
+                    
+                    <p class="content-padded">
+                        <a 
+                           id="take-pic" class="btn btn-primary btn-block">
+                            <span class="icon icon-play"></span>
+                            Take Picture  <!-- process the info then dispatch click to the close button -->
+                        </a>
+                           <a id="cancel" class="btn btn-block" href="#personModal">
+                            <span class="icon icon-close"></span>
+                            Cancel <!-- dispatch click to the close button -->
+                        </a>
+                        <a 
+                           id="save" class="save btn btn-primary btn-block" href="#personModal">
+                            <span class="icon icon-check"></span>
+                            Save  <!-- process the info then dispatch click to the close button -->
+                        </a>
+                    </p>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+        
+<!--
+        <div class="modal" id="pagethree">
+  <header class="bar bar-nav">
+    <h1>Heading Three</h1>
+  </header>
+  <div class="content">
+     content goes here 
+    <a href="#pagethree">Link back to main page</a>
+  </div>
+-->
+<!--</div>-->
+        
+    <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/main.js">
+        </script>
+        
+        <!-- include the compiled Ratchet JS -->
+        <script src="js/ratchet.min.js"></script>
+<!--        <script src="js/moment.js"></script>-->
+<!--        <script src="js/app.js"></script>-->
+    </body>
+</html>
